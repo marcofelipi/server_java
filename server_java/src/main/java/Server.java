@@ -28,7 +28,7 @@ public class Server {
                 System.out.println("Cliente conectado: " + socketCliente.getInetAddress().getHostAddress());
 
                 // 2. Cria uma nova instância do nosso tratador para este cliente específico.
-                Client cliente = new Client(socketCliente);
+                Handler cliente = new Handler(socketCliente);
                 
                 // 3. Cria uma nova Thread, entrega o tratador para ela, e a inicia.
                 //    O servidor não espera a thread terminar. Ele volta imediatamente 
